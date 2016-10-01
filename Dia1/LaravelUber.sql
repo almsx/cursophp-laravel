@@ -34,7 +34,7 @@ CREATE TABLE `Conductores` (
   `aMaterno` varchar(40) NOT NULL,
   `idEstado` int(11) NOT NULL,
   `telefono` varchar(10) NOT NULL,
-  `fotografia` text NOT NULL DEFAULT 'img/fotografia.png',
+  `fotografia` VARCHAR(300) NOT NULL DEFAULT 'img/fotografia.png',
   FOREIGN KEY (idEstado) REFERENCES Estados(idEstado)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
