@@ -1,6 +1,6 @@
 #Creación de las llaves de SSH
 
-#copiar llave existene ssh
+#copiar llave existente ssh
 $ pbcopy < ~/.ssh/id_rsa.pub
 
 #Bajar GPG para Windows
@@ -47,7 +47,7 @@ $ composer update
 
 #Agregamos a Service Providers en config/app.php:
 $ Way\Generators\GeneratorsServiceProvider::class,
-$ Xethron\MigrationsGenerator\MigrationsGeneratorServiceProvider::class,
+Xethron\MigrationsGenerator\MigrationsGeneratorServiceProvider::class,
 
 #Hacemos la migración con base de datos existente4
 $ php artisan migrate:generate
