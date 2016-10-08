@@ -1,7 +1,9 @@
 #Creación de las llaves de SSH
-
 #copiar llave existente ssh
 $ pbcopy < ~/.ssh/id_rsa.pub
+
+#Instalación y Configuración de Vagrant
+$ https://www.youtube.com/watch?v=k9xQBKzpOjk
 
 #Bajar GPG para Windows
 $ https://www.gnupg.org/download/
