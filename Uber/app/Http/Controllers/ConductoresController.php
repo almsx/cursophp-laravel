@@ -2,6 +2,8 @@
 namespace Uber\Http\Controllers;
 use Illuminate\Http\Request;
 use Uber\Http\Requests;
+use Uber\Conductores;
+use Uber\Estados;
 class ConductoresController extends Controller
 {
     /**
@@ -9,11 +11,17 @@ class ConductoresController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
     public function index()
     {
         //return("index para conductores");
         //return view('conductores');
-        return view('indexConductores');
+        //return view('indexConductores');
+        
+        //return view('altaConductor');
+        $estados = Estados::lists('nombreEstado', 'idEstado');
+        return view('altaConductor',compact('estados'));
+
     }
     /**
      * Show the form for creating a new resource.
@@ -22,7 +30,7 @@ class ConductoresController extends Controller
      */
     public function create()
     {
-        return view('altaConductores');
+        return view('altaConductor');
     }
     /**
      * Store a newly created resource in storage.
@@ -32,7 +40,21 @@ class ConductoresController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        //return $request['nombreC'];
+        
+       \Uber\Conductores::create([
+        'nombre' => $request['nombreC'],
+        'aPaterno' => $request['aPaternoC'],
+        'aMaterno' => $request['aMaternoC'],
+        'idEstado' => $request['stateC'],
+        'telefono' => $request['telefonoC'],
+        'fotografia' => 'http://www.google.com/img.png',
+        ]);
+
+        return ("inserccion exitosa");
+        
+       
     }
     /**
      * Display the specified resource.
