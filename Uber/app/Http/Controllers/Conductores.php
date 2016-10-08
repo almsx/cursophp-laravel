@@ -1,8 +1,12 @@
 <?php
+
 namespace Uber\Http\Controllers;
+
 use Illuminate\Http\Request;
+
 use Uber\Http\Requests;
-class ConductoresController extends Controller
+
+class Conductores extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -11,10 +15,9 @@ class ConductoresController extends Controller
      */
     public function index()
     {
-        //return("index para conductores");
-        //return view('conductores');
-        return view('indexConductores');
+        //
     }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -22,8 +25,9 @@ class ConductoresController extends Controller
      */
     public function create()
     {
-        return view('altaConductores');
+        //
     }
+
     /**
      * Store a newly created resource in storage.
      *
@@ -33,7 +37,10 @@ class ConductoresController extends Controller
     public function store(Request $request)
     {
         //
+        $car = Car::find($id);
+        return view('cars.show', array('car' => $car));
     }
+
     /**
      * Display the specified resource.
      *
@@ -44,6 +51,7 @@ class ConductoresController extends Controller
     {
         //
     }
+
     /**
      * Show the form for editing the specified resource.
      *
@@ -54,6 +62,7 @@ class ConductoresController extends Controller
     {
         //
     }
+
     /**
      * Update the specified resource in storage.
      *
@@ -65,6 +74,7 @@ class ConductoresController extends Controller
     {
         //
     }
+
     /**
      * Remove the specified resource from storage.
      *

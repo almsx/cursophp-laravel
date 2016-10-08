@@ -154,7 +154,9 @@ return [
         Uber\Providers\AppServiceProvider::class,
         Uber\Providers\AuthServiceProvider::class,
         Uber\Providers\EventServiceProvider::class,
-        Uber\Providers\RouteServiceProvider::class,
+        Uber\Providers\RouteServiceProvider::class, 
+        Way\Generators\GeneratorsServiceProvider::class,
+        Xethron\MigrationsGenerator\MigrationsGeneratorServiceProvider::class,
 
     ],
 

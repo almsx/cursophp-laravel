@@ -4,7 +4,7 @@ namespace Uber;
 
 use Illuminate\Database\Eloquent\Model;
 
-class User extends Model
+class Car extends Model
 {
     //
 }
