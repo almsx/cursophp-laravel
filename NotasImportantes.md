@@ -10,10 +10,8 @@ $ php artisan serv
 #Crear un nuevo Controlador
 $ php artisan make:controller LoginController
 
-#Crear un nuevo Controlador con metodos basicos
-#Acceso API
-
-$ php artisan make:controller ConductoresController
+#Crear un nuevo Controlador con metodos basicos - Acceso API
+$ php artisan make:controller ConductoresController --resources
 
 #Tarifas Uber X
 #https://www.uber.com/es/fare-estimate/
