@@ -1,7 +1,7 @@
 #Creación de un Nuevo Proyecto
 $ composer create-project laravel/laravel Uber
 
-#Asignación de NameSpace al Proyecto
+#Asignación de NameSpaceo o Renombrar NameSpace al Proyecto
 $ php artisan app:name Uber
 
 #Ejecución Servidor 
@@ -11,35 +11,35 @@ $ php artisan serv
 $ php artisan make:controller LoginController
 
 #Crear un nuevo Controlador con metodos basicos - Acceso API
-$ php artisan make:controller ConductoresController --resources
+$ php artisan make:controller ConductoresController --resource
 
-#Tarifas Uber X
-#https://www.uber.com/es/fare-estimate/
+#Crear un Modelo
+$ php artisan make:model Conductores
 
-#Tarifa base 7.00
-Por Minuto 1.80
-Por KM 3.10
+#Crear Un modelo con migración para crear la base de datos desde el Modelo
+$ php artisan make:model Vehiculos --migration
 
-#Tarifas Uber XL
-Tarifa base 12.25
-Por Minuto 3.15
-Por KM 5.45
+#Utilizar tabla de bases de datos existentes
+$ composer require --dev --no-update "xethron/migrations-generator:dev-l5"
 
-#Tarifas Uber SUV
-Tarifa base 40.00
-Por Minuto 4.00
-Por KM 13.12
+$ composer require --dev --no-update "way/generators:dev-feature/laravel-five-stable"
 
-#Tarifas Uber Black
-Tarifa base 30.00
-Por Minuto 3.50
-Por KM 8.20
+$ composer config repositories.repo-name git "git@github.com:jamisonvalenta/Laravel-4-Generators.git"
 
-#Ejemplo Uber X
+$ composer update
 
-Un Viaje de 80 Minutos y se recorrio 60 km
-80 x 1.80 = 144
-60 x 3.10 = 186
-Tarifa Base = 7
+#Agregamos a Service Providers en config/app.php:
+$ Way\Generators\GeneratorsServiceProvider::class,
+$ Xethron\MigrationsGenerator\MigrationsGeneratorServiceProvider::class,
 
-Total del Viaje = $337.00
+#Hacemos la migración con base de datos existente4
+$ php artisan migrate:generate
+
+#Form html
+$ composer require laravelcollective/html
+
+#Laravel Collective
+$ https://laravelcollective.com/docs/5.0/html#installation
+
+#Evitar timestamps para actualizacion y creacion se declaran en el modelo
+$ public $timestamps = false;
