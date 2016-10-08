@@ -15,6 +15,10 @@ class LoginController extends Controller
 
 	}
 
+	public function nombre($nombre){
+    	return("Hola mi nombre es ".$nombre);
+    }
+
 	public function create(){
 		return "Formulario de creacion";
 	}
