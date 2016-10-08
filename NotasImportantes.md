@@ -1,5 +1,8 @@
 #Creación de las llaves de SSH
 
+#copiar llave existene ssh
+$ pbcopy < ~/.ssh/id_rsa.pub
+
 #Bajar GPG para Windows
 $ https://www.gnupg.org/download/
 
