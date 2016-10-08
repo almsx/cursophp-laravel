@@ -1,3 +1,17 @@
+#Creación de las llaves de SSH
+
+#Bajar GPG para Windows
+$ https://www.gnupg.org/download/
+
+#Mac
+$ https://help.github.com/articles/generating-a-new-gpg-key/#platform-mac
+
+#Windows
+$ https://help.github.com/articles/generating-a-new-gpg-key/#platform-windows
+
+#Linux
+$ https://help.github.com/articles/generating-a-new-gpg-key/#platform-linux
+
 #Creación de un Nuevo Proyecto
 $ composer create-project laravel/laravel Uber
 
