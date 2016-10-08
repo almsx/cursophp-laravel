@@ -30,7 +30,6 @@
 			  <div class="form-group">
 			    <label for="exampleInputFile">Fotografía</label>
 			    <input type="file" id="exampleInputFile">
-			    <p class="help-block">Suba su fotografia</p>
 			  </div>
 			  <button type="submit" class="btn btn-primary">Enviar Conductor</button>
 		  </form>
