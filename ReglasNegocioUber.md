@@ -1,26 +1,26 @@
-#Tarifas Uber X
-#https://www.uber.com/es/fare-estimate/
+Liga - https://www.uber.com/es/fare-estimate/
 
-#Tarifa base 7.00
-Por Minuto 1.80
-Por KM 3.10
+##Tarifas Uber X
+<li>Tarifa base 7.00</li>
+<li>Por Minuto 1.80</li>
+<li>Por KM 3.10</li>
 
-#Tarifas Uber XL
-Tarifa base 12.25
-Por Minuto 3.15
-Por KM 5.45
+## Tarifas Uber XL
+<li>Tarifa base 12.25</li>
+<li>Por Minuto 3.15</li>
+<li>Por KM 5.45</li>
 
-#Tarifas Uber SUV
-Tarifa base 40.00
-Por Minuto 4.00
-Por KM 13.12
+## Tarifas Uber SUV
+<li>Tarifa base 40.00</li>
+<li>Por Minuto 4.00</li>
+<li>Por KM 13.12</li>
 
-#Tarifas Uber Black
-Tarifa base 30.00
-Por Minuto 3.50
-Por KM 8.20
+## Tarifas Uber Black
+<li>Tarifa base 30.00</li>
+<li>Por Minuto 3.50</li>
+<li>Por KM 8.20</li>
 
-#Ejemplo Uber X
+## Ejemplo Uber X
 
 Un Viaje de 80 Minutos y se recorrio 60 km
 80 x 1.80 = 144
