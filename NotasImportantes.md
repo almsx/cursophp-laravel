@@ -8,7 +8,7 @@ $ pbcopy < ~/.ssh/id_rsa.pub
 ~~~
 
 ##Instalación y Configuración de Vagrant (Recomendado por Arce)
-$ https://www.youtube.com/watch?v=k9xQBKzpOjk
+Liga - https://www.youtube.com/watch?v=k9xQBKzpOjk
 
 ##Bajar GPG para Windows
 Liga - https://www.gnupg.org/download/
