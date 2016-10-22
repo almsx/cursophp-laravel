@@ -1,6 +1,21 @@
 @extends('plantilla')
 @section('title', 'Alta')
 @section('content')
+
+<!--Vista de Errores-->
+
+@if(count($errors) >0)
+<div class="alert alert-danger alert-dismisible" role="alert">
+	<button type="button" class="close" data-dismiss="alert" aria-label="Close"></button>
+	<ul>
+		@foreach($errors->all() as $error)
+			<li>{!!$error!!}</li>
+		@endforeach
+	</ul>
+</div>
+
+@endif
+
 <h1>Uber:: Conductores</h1>
 			<!--a href="../conductores">Regresar a Conductores</a-->
 			{!!Form::open(['route'=>'conductores.store', 'method'=>'post'])!!}
@@ -36,7 +51,7 @@
 			
 			<div class="form-group">
 				{!!Form::label('Teléfono')!!}
-				{!!Form::text('telefonoC',null,['class'=>'form-control','placeHolder'=>'Ingresa tu telefono'])!!}
+				{!!Form::text('telefono',null,['class'=>'form-control','placeHolder'=>'Ingresa tu telefono'])!!}
 			</div>
 			
 			<div class="form-group">

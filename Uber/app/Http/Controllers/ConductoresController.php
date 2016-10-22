@@ -1,9 +1,12 @@
 <?php
 namespace Uber\Http\Controllers;
 use Illuminate\Http\Request;
+use Uber\Http\Requests\StoreConductorPostRequest;
 use Uber\Http\Requests;
 use Uber\Conductores;
 use Uber\Estados;
+//Password Hash
+use Illuminate\Support\Facades\Hash;
 class ConductoresController extends Controller
 {
     /**
@@ -38,21 +41,30 @@ class ConductoresController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    
+    //Default
+    //public function store(Request $request)
+    //Con Validación de Requerimientos en la petición
+    public function store(StoreConductorPostRequest $request)
     {
 
         //return $request['nombreC'];
+        $passwordHashh = Hash::make($request['passwordC']);
         
        \Uber\Conductores::create([
+
         'nombre' => $request['nombreC'],
         'aPaterno' => $request['aPaternoC'],
         'aMaterno' => $request['aMaternoC'],
         'idEstado' => $request['stateC'],
-        'telefono' => $request['telefonoC'],
+        'telefono' => $request['telefono'],
         'fotografia' => 'http://www.google.com/img.png',
+        'usuarioC' => $request['usuarioC'],
+        //'passwordC' => $request['passwordC'],
+        'passwordC' => $passwordHashh,
         ]);
 
-        return ("inserción exitosa");
+        return ("inserción exitosa usuarios");
         
        
     }

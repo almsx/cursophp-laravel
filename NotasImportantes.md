@@ -117,3 +117,24 @@ Liga - https://laravelcollective.com/docs/5.0/html#installation
 ~~~
 public $timestamps = false;
 ~~~
+
+## Request Personalizados
+
+Nos permite tener el control de nuestros formularios y validar los campos que son
+requeridos además de poder tener campos sin duplicar.
+
+## Creamos un Request Personalizado
+
+>
+~~~
+$ php artisan make:request StoreConductorPersonalizado
+~~~
+
+## Hash de Passwords para Formularios
+
+Importamos la libreria en nuestro Controlador
+
+>
+~~~
+use Illuminate\Support\Facades\Hash;
+~~~
