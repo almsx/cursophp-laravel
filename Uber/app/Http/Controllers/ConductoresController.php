@@ -52,7 +52,7 @@ class ConductoresController extends Controller
         'fotografia' => 'http://www.google.com/img.png',
         ]);
 
-        return ("inserccion exitosa");
+        return ("inserción exitosa");
         
        
     }
