@@ -23,7 +23,8 @@
 					  <option>CDMX</option>
 					  <option>Edomex</option>
 				</select-->
-				{!!Form::select('stateC',$estados)!!}
+				<!--{!!Form::select('stateC',$estados)!!}-->
+				{{ Form::select('stateC', $estados, null, array('class' => 'form-control')) }}
 				
 				<!--{!!Form::select('size', array('L' => 'Large', 'S' => 'Small'))!!}-->
 				
