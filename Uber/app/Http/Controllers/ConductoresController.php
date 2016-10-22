@@ -16,8 +16,23 @@ class ConductoresController extends Controller
      * @return \Illuminate\Http\Response
      */
 
+    public function saludaPepe(){
+        return ("hola pepe");
+    }
+
+    public function top10()
+    {
+       $conductores = Conductores::where('idEstado',2)
+                            ->orderBy('nombre','ASC')
+                            ->take(3)
+                            ->get();   
+        return view("indexConductores",compact('conductores'));
+    }
+
     public function index()
     {
+        
+
         $conductores = Conductores::All();   
         return view("indexConductores",compact('conductores'));
     }

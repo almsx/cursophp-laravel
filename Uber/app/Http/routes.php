@@ -13,7 +13,11 @@
 
 /*API Conductores*/
 
+Route::get('conductores/pepe','ConductoresController@saludaPepe');
+Route::get('conductores/top10','ConductoresController@top10');
 Route::resource('conductores','ConductoresController');
+
+
 
 Route::get('/', function () {
     return view('welcome');
