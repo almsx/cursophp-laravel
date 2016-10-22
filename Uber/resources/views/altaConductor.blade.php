@@ -16,8 +16,10 @@
 
 @endif
 
+<a href="/conductores/"><button type="button" class="btn btn-default">Panel de Control</button></a> |
+			
 <h1>Uber:: Conductores</h1>
-			<!--a href="../conductores">Regresar a Conductores</a-->
+			
 			{!!Form::open(['route'=>'conductores.store', 'method'=>'post'])!!}
 			
 			<div class="form-group">
@@ -56,7 +58,7 @@
 			
 			<div class="form-group">
     		{!! Form::label('Fotografía') !!}
-    		{!! Form::file('image', null) !!}
+    		{{ Form::file('thefile', ['class' => 'field']) }}
 			</div>
 
 			

@@ -12,4 +12,6 @@ class Conductores extends Model
     //protected $hidden = ['updated_at'];
 	public $timestamps = false;
 
+	
+
 }

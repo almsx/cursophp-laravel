@@ -15,7 +15,6 @@
 
 Route::resource('conductores','ConductoresController');
 
-
 Route::get('/', function () {
     return view('welcome');
 });

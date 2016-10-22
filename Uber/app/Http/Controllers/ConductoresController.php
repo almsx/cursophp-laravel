@@ -7,6 +7,7 @@ use Uber\Conductores;
 use Uber\Estados;
 //Password Hash
 use Illuminate\Support\Facades\Hash;
+//use Illuminate\Support\Facades\DB;
 class ConductoresController extends Controller
 {
     /**
@@ -17,14 +18,8 @@ class ConductoresController extends Controller
 
     public function index()
     {
-        //return("index para conductores");
-        //return view('conductores');
-        //return view('indexConductores');
-        
-        //return view('altaConductor');
-        $estados = Estados::lists('nombreEstado', 'idEstado');
-        return view('altaConductor',compact('estados'));
-
+        $conductores = Conductores::All();   
+        return view("indexConductores",compact('conductores'));
     }
     /**
      * Show the form for creating a new resource.
@@ -33,7 +28,9 @@ class ConductoresController extends Controller
      */
     public function create()
     {
-        return view('altaConductor');
+        //return view('altaConductor');
+        $estados = Estados::lists('nombreEstado', 'idEstado');
+        return view('altaConductor',compact('estados'));
     }
     /**
      * Store a newly created resource in storage.
