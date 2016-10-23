@@ -1,25 +1,9 @@
 @extends('plantilla')
-@section('title', 'Alta')
+@section('title', 'Editar Conductor')
 @section('content')
+<a href="/conductores/"><button type="button" class="btn btn-default">Regresar</button></a> |
 
-<!--Vista de Errores-->
-
-@if(count($errors) >0)
-<div class="alert alert-danger alert-dismisible" role="alert">
-	<button type="button" class="close" data-dismiss="alert" aria-label="Close"></button><span aria-hidden="true">&times;</span>
-	<ul>
-		@foreach($errors->all() as $error)
-			<li>{!!$error!!}</li>
-		@endforeach
-	</ul>
-</div>
-@endif
-
-<a href="/conductores/"><button type="button" class="btn btn-default">Panel de Control</button></a> |
-			
-<h1>Uber:: Conductores</h1>
-			
-			{!!Form::open(['route'=>'conductores.store', 'method'=>'post'])!!}
+{!!Form::model($conductor, ['route'=> ['conductores.update',$conductor->idConductor],'method'=>'PUT'])!!}
 			
 			<div class="form-group">
 				{!!Form::label('Usuario(*):')!!}
@@ -34,15 +18,15 @@
 
 			<div class="form-group">
 				{!!Form::label('Nombre')!!}
-				{!!Form::text('nombreC',null,['class'=>'form-control','placeHolder'=>'Ingresa tu nombre'])!!}
+				{!!Form::text('nombre',null,['class'=>'form-control','placeHolder'=>'Ingresa tu nombre'])!!}
 			</div>
 			<div class="form-group">
 				{!!Form::label('Apellido Paterno')!!}
-				{!!Form::text('aPaternoC',null,['class'=>'form-control','placeHolder'=>'Ingresa tu Apellido Paterno'])!!}
+				{!!Form::text('aPaterno',null,['class'=>'form-control','placeHolder'=>'Ingresa tu Apellido Paterno'])!!}
 			</div>
 			<div class="form-group">
 				{!!Form::label('Apellido Materno')!!}
-				{!!Form::text('aMaternoC',null,['class'=>'form-control','placeHolder'=>'Ingresa tu Apellido Materno'])!!}
+				{!!Form::text('aMaterno',null,['class'=>'form-control','placeHolder'=>'Ingresa tu Apellido Materno'])!!}
 			
 			</div>
 			<div class="form-group">
@@ -62,7 +46,11 @@
 
 			
 
-			{!!Form::submit('Registrar Conductor',['class'=>'btn btn-primary'])!!}
+			{!!Form::submit('Actualizar Conductor',['class'=>'btn btn-primary'])!!}
 			
 			{!!Form::close()!!}
-@endsection
+
+			{!!Form::open(['route'=> ['conductores.destroy',$conductor->idConductor],'method'=>'DELETE'])!!}
+				{!!Form::submit('Eliminar',['class'=>'btn btn-danger'])!!}
+			{!!Form::close()!!}
+@stop

@@ -7,6 +7,9 @@ use Uber\Conductores;
 use Uber\Estados;
 //Password Hash
 use Illuminate\Support\Facades\Hash;
+use Uber\Conductor;
+use Redirect;
+use Session;
 //use Illuminate\Support\Facades\DB;
 class ConductoresController extends Controller
 {
@@ -60,23 +63,21 @@ class ConductoresController extends Controller
     public function store(StoreConductorPostRequest $request)
     {
 
-        //return $request['nombreC'];
         $passwordHashh = Hash::make($request['passwordC']);
         
-       \Uber\Conductores::create([
-
-        'nombre' => $request['nombreC'],
-        'aPaterno' => $request['aPaternoC'],
-        'aMaterno' => $request['aMaternoC'],
-        'idEstado' => $request['stateC'],
-        'telefono' => $request['telefono'],
-        'fotografia' => 'http://www.google.com/img.png',
-        'usuarioC' => $request['usuarioC'],
-        //'passwordC' => $request['passwordC'],
-        'passwordC' => $passwordHashh,
+        Conductores::create([
+            'nombre' => $request['nombreC'],
+            'aPaterno' => $request['aPaternoC'],
+            'aMaterno' => $request['aMaternoC'],
+            'idEstado' => $request['stateC'],
+            'telefono' => $request['telefono'],
+            'fotografia' => 'http://www.google.com/img.png',
+            'usuarioC' => $request['usuarioC'],
+            'passwordC' => $passwordHashh,
         ]);
 
-        return ("inserción exitosa usuarios");
+        Session::flash('message','Conductor fue registrado exitosamente.');
+        return Redirect::to('/conductores');
         
        
     }
@@ -96,9 +97,13 @@ class ConductoresController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($idConductor)
     {
-        //
+
+        $estados = Estados::lists('nombreEstado', 'idEstado');
+        // return view('altaConductor',compact('estados'));
+        $conductor = Conductores::find($idConductor);
+        return view('editConductor', ['conductor'=>$conductor], compact('estados'));
     }
     /**
      * Update the specified resource in storage.
@@ -107,18 +112,20 @@ class ConductoresController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $idConductor)
     {
-        //
+        $conductor = Conductores::find($idConductor);
+        $conductor->fill($request->all());
+        $conductor->save();
+
+        Session::flash('message','Conductor fue actualizado exitosamente.');
+        return Redirect::to('/conductores');
     }
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
+    
+    public function destroy($idConductor){
+        Conductores::destroy($idConductor);
+        Session::flash('message','Conductor fue eliminado exitosamente.');
+        return Redirect::to('/conductores');
+
     }
 }
