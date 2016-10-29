@@ -26,9 +26,9 @@ class StoreConductorPostRequest extends Request
         return [
             'usuarioC' => 'required|unique:Conductores',
             'passwordC' => 'required',
-            'nombreC' => 'required',
-            'aPaternoC' => 'required',
-            'aMaternoC' => 'required',
+            'nombre' => 'required',
+            'aPaterno' => 'required',
+            'aMaterno' => 'required',
             'telefono' => 'required|unique:Conductores'
         ];
     }

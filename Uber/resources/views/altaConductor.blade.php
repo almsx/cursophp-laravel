@@ -20,8 +20,10 @@
 <h1>Uber:: Conductores</h1>
 			
 			{!!Form::open(['route'=>'conductores.store', 'method'=>'post'])!!}
+
+			@include('formConductores')
 			
-			<div class="form-group">
+			<!--div class="form-group">
 				{!!Form::label('Usuario(*):')!!}
 				{!!Form::text('usuarioC',null,['class'=>'form-control','placeHolder'=>'Ingresa tu Usuario'])!!}
 			</div>
@@ -58,7 +60,7 @@
 			<div class="form-group">
     		{!! Form::label('Fotografía') !!}
     		{{ Form::file('thefile', ['class' => 'field']) }}
-			</div>
+			</div-->
 
 			
 

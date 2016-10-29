@@ -66,9 +66,9 @@ class ConductoresController extends Controller
         $passwordHashh = Hash::make($request['passwordC']);
         
         Conductores::create([
-            'nombre' => $request['nombreC'],
-            'aPaterno' => $request['aPaternoC'],
-            'aMaterno' => $request['aMaternoC'],
+            'nombre' => $request['nombre'],
+            'aPaterno' => $request['aPaterno'],
+            'aMaterno' => $request['aMaterno'],
             'idEstado' => $request['stateC'],
             'telefono' => $request['telefono'],
             'fotografia' => 'http://www.google.com/img.png',
