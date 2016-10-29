@@ -25,7 +25,6 @@
 		<th>Apellido Paterno</th>
 		<th>Apellido Materno</th>
 		<th>Teléfono</th>
-		<th>Estado</th>
 		<th>Actualizar</th>
 	</thead>
 	@foreach($conductores as $conductor)
@@ -34,12 +33,7 @@
 		<td>{{$conductor -> aPaterno}}</td>
 		<td>{{$conductor -> aMaterno}}</td>
 		<td>{{$conductor -> telefono}}</td>
-		<td>{{$conductor -> nombreEstado}}</td>
 		<td>{!!link_to_route('conductores.edit', $title = 'Editar', $parameters = $conductor->idConductor, $attributes = ['class'=>'btn btn-primary']) !!} </td>
 	</tbody>
 	@endforeach
 </table>
-
-{!!$conductores->render()!!}
-
-@stop

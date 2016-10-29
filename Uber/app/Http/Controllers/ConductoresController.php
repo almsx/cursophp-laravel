@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Hash;
 use Uber\Conductor;
 use Redirect;
 use Session;
-//use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\DB;
 class ConductoresController extends Controller
 {
     /**
@@ -25,23 +25,32 @@ class ConductoresController extends Controller
 
     public function top10()
     {
-       $conductores = Conductores::where('idEstado',2)
+       $conductores = Conductores::where('idEstado',1)
                             ->orderBy('nombre','ASC')
                             ->take(3)
-                            ->get();   
-        return view("indexConductores",compact('conductores'));
+                            ->get();
+
+        return view("top10",compact('conductores'));
     }
 
     public function index()
     {
         
         //Mostrar todos los Conductores
-        $conductores = Conductores::All();   
+        //$conductores = Conductores::All();   
+        
         //Paginar Resultados
-        $conductores = Conductores::paginate(1);
+        //$conductores = Conductores::paginate(3);
+
+        //Paginar Resultados con Query
+        $conductores = DB::table('Conductores')
+        ->join('Estados', 'Estados.idEstado', '=', 'Conductores.idEstado')
+        ->paginate(4);
+              
+        
         return view("indexConductores",compact('conductores'));
-        //return view('loginConductores');
     }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -62,6 +71,7 @@ class ConductoresController extends Controller
     
     //Default
     //public function store(Request $request)
+    
     //Con Validación de Requerimientos en la petición
     public function store(StoreConductorPostRequest $request)
     {
@@ -104,9 +114,9 @@ class ConductoresController extends Controller
     {
 
         $estados = Estados::lists('nombreEstado', 'idEstado');
-        // return view('altaConductor',compact('estados'));
         $conductor = Conductores::find($idConductor);
         return view('editConductor', ['conductor'=>$conductor], compact('estados'));
+    
     }
     /**
      * Update the specified resource in storage.
@@ -123,9 +133,11 @@ class ConductoresController extends Controller
 
         Session::flash('message','Conductor fue actualizado exitosamente.');
         return Redirect::to('/conductores');
+    
     }
     
     public function destroy($idConductor){
+        
         Conductores::destroy($idConductor);
         Session::flash('message','Conductor fue eliminado exitosamente.');
         return Redirect::to('/conductores');

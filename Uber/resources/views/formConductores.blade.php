@@ -24,7 +24,10 @@
 			</div>
 			<div class="form-group">
 				{!!Form::label('Selecciona Estado:')!!}
-			    {{ Form::select('stateC', $estados, null, array('class' => 'form-control')) }}
+				<!--Formulario Normal-->
+			    <!--{{ Form::select('stateC', $estados, null, array('class' => 'form-control')) }}-->
+			    <!--Formulaio con buscador-->
+			    {{ Form::select('stateC', $estados, null, array('class' => 'form-control chosen-select')) }}
 			</div>
 			
 			<div class="form-group">

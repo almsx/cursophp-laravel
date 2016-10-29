@@ -57,3 +57,6 @@ Route::get('edad/{edad}', function($edad){
 Route::get('edad2/{edad?}', function($edad='25'){
 	return "tu edad es ".$edad;
 });
+Route::auth();
+
+Route::get('/home', 'HomeController@index');

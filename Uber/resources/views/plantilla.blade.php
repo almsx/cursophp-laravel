@@ -5,7 +5,8 @@
 	<link href="/libs/bootstrap/css/bootstrap.min.css" rel=stylesheet>
 	<script src="/libs/bootstrap/js/bootstrap.min.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
-	<style>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.6.2/chosen.min.css" rel=stylesheet>
+    <style>
             /*
             html, body {
                 height: 100%;
@@ -32,6 +33,12 @@
                 font-size: 96px;
             }
         </style>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.6.2/chosen.jquery.min.js"></script>
+            <script>
+                $( document ).ready(function() {
+                    $(".chosen-select").chosen();
+                });
+            </script>
 </head>
 <body>
 	<div class="container">

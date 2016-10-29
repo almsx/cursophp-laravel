@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "64cf9cbcf3d522ac6326c11639446e5a",
-    "content-hash": "66990fd76257c79f2c9d926ce1deb137",
+    "hash": "b7b78ad16ae660d876320b790ca09425",
+    "content-hash": "27ac9478c338ee5bbc4ac686fd2aee06",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -307,6 +307,56 @@
             "time": "2015-12-05 17:17:57"
         },
         {
+            "name": "kbwebs/multiauth",
+            "version": "v1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Kbwebs/MultiAuth.git",
+                "reference": "be6b2780fc63b92a956a332f781e43023cfb8233"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Kbwebs/MultiAuth/zipball/be6b2780fc63b92a956a332f781e43023cfb8233",
+                "reference": "be6b2780fc63b92a956a332f781e43023cfb8233",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/auth": "~5.1",
+                "illuminate/console": "~5.1",
+                "illuminate/database": "~5.1",
+                "illuminate/filesystem": "~5.1",
+                "illuminate/support": "~5.1",
+                "php": ">=5.5.9"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Kbwebs\\MultiAuth\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kasper Basse",
+                    "email": "kasperbasse@gmail.com"
+                }
+            ],
+            "description": "MultiAuth for Laravel 5.1",
+            "keywords": [
+                "auth",
+                "laravel",
+                "login",
+                "multi",
+                "multiauth",
+                "signin",
+                "user"
+            ],
+            "time": "2015-09-12 08:04:15"
+        },
+        {
             "name": "laravel/framework",
             "version": "v5.2.45",
             "source": {
@@ -492,20 +542,20 @@
         },
         {
             "name": "league/flysystem",
-            "version": "1.0.28",
+            "version": "1.0.32",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "a9663643ff2d16d7f66ed1e0d3212c5491bc9044"
+                "reference": "1b5c4a0031697f46e779a9d1b309c2e1b24daeab"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/a9663643ff2d16d7f66ed1e0d3212c5491bc9044",
-                "reference": "a9663643ff2d16d7f66ed1e0d3212c5491bc9044",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/1b5c4a0031697f46e779a9d1b309c2e1b24daeab",
+                "reference": "1b5c4a0031697f46e779a9d1b309c2e1b24daeab",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.4.0"
+                "php": ">=5.5.9"
             },
             "conflict": {
                 "league/flysystem-sftp": "<1.0.6"
@@ -571,7 +621,7 @@
                 "sftp",
                 "storage"
             ],
-            "time": "2016-10-07 12:20:37"
+            "time": "2016-10-19 20:38:46"
         },
         {
             "name": "monolog/monolog",
@@ -843,16 +893,16 @@
         },
         {
             "name": "psr/log",
-            "version": "1.0.1",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/log.git",
-                "reference": "5277094ed527a1c4477177d102fe4c53551953e0"
+                "reference": "4ebe3a8bf773a19edfe0a84b6585ba3d401b724d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/log/zipball/5277094ed527a1c4477177d102fe4c53551953e0",
-                "reference": "5277094ed527a1c4477177d102fe4c53551953e0",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/4ebe3a8bf773a19edfe0a84b6585ba3d401b724d",
+                "reference": "4ebe3a8bf773a19edfe0a84b6585ba3d401b724d",
                 "shasum": ""
             },
             "require": {
@@ -886,7 +936,7 @@
                 "psr",
                 "psr-3"
             ],
-            "time": "2016-09-19 16:02:08"
+            "time": "2016-10-10 12:19:37"
         },
         {
             "name": "psy/psysh",
@@ -959,6 +1009,54 @@
                 "shell"
             ],
             "time": "2016-03-09 05:03:14"
+        },
+        {
+            "name": "sarav/laravel-multiauth",
+            "version": "0.0.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Sarav-S/Laravel-Multiauth.git",
+                "reference": "5f6daa76e3faa57c45e50dad3e07d6a216a4793c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Sarav-S/Laravel-Multiauth/zipball/5f6daa76e3faa57c45e50dad3e07d6a216a4793c",
+                "reference": "5f6daa76e3faa57c45e50dad3e07d6a216a4793c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.9"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Sarav\\Multiauth\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sarav",
+                    "email": "me@sarav.co"
+                }
+            ],
+            "description": "A Simple Laravel Package for handling multiple authentication",
+            "keywords": [
+                "Authentication",
+                "auth",
+                "laravel",
+                "laravel 5",
+                "login",
+                "multi",
+                "multiauth",
+                "multiple",
+                "signin",
+                "user"
+            ],
+            "time": "2015-12-24 09:22:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -1132,16 +1230,16 @@
         },
         {
             "name": "symfony/event-dispatcher",
-            "version": "v3.1.5",
+            "version": "v3.1.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/event-dispatcher.git",
-                "reference": "c0c00c80b3a69132c4e55c3e7db32b4a387615e5"
+                "reference": "28b0832b2553ffb80cabef6a7a812ff1e670c0bc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/c0c00c80b3a69132c4e55c3e7db32b4a387615e5",
-                "reference": "c0c00c80b3a69132c4e55c3e7db32b4a387615e5",
+                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/28b0832b2553ffb80cabef6a7a812ff1e670c0bc",
+                "reference": "28b0832b2553ffb80cabef6a7a812ff1e670c0bc",
                 "shasum": ""
             },
             "require": {
@@ -1188,7 +1286,7 @@
             ],
             "description": "Symfony EventDispatcher Component",
             "homepage": "https://symfony.com",
-            "time": "2016-07-19 10:45:57"
+            "time": "2016-10-13 06:28:43"
         },
         {
             "name": "symfony/finder",
@@ -1914,16 +2012,16 @@
         },
         {
             "name": "doctrine/cache",
-            "version": "v1.6.0",
+            "version": "v1.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/cache.git",
-                "reference": "f8af318d14bdb0eff0336795b428b547bd39ccb6"
+                "reference": "b6f544a20f4807e81f7044d31e679ccbb1866dc3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/cache/zipball/f8af318d14bdb0eff0336795b428b547bd39ccb6",
-                "reference": "f8af318d14bdb0eff0336795b428b547bd39ccb6",
+                "url": "https://api.github.com/repos/doctrine/cache/zipball/b6f544a20f4807e81f7044d31e679ccbb1866dc3",
+                "reference": "b6f544a20f4807e81f7044d31e679ccbb1866dc3",
                 "shasum": ""
             },
             "require": {
@@ -1980,7 +2078,7 @@
                 "cache",
                 "caching"
             ],
-            "time": "2015-12-31 16:37:02"
+            "time": "2016-10-29 11:16:17"
         },
         {
             "name": "doctrine/collections",
@@ -3520,16 +3618,16 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v3.1.5",
+            "version": "v3.1.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "368b9738d4033c8b93454cb0dbd45d305135a6d3"
+                "reference": "7ff51b06c6c3d5cc6686df69004a42c69df09e27"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/368b9738d4033c8b93454cb0dbd45d305135a6d3",
-                "reference": "368b9738d4033c8b93454cb0dbd45d305135a6d3",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/7ff51b06c6c3d5cc6686df69004a42c69df09e27",
+                "reference": "7ff51b06c6c3d5cc6686df69004a42c69df09e27",
                 "shasum": ""
             },
             "require": {
@@ -3565,7 +3663,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2016-09-25 08:27:07"
+            "time": "2016-10-24 18:41:13"
         },
         {
             "name": "way/generators",

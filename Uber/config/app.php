@@ -126,7 +126,16 @@ return [
         /*
          * Laravel Framework Service Providers...
          */
+        
+        /*Autenticación por default*/
+        
         Illuminate\Auth\AuthServiceProvider::class,
+        
+        /*Autenticacion Clase*/
+        //Illuminate\Auth\AuthServiceProvider::class -> Kbwebs\MultiAuth\AuthServiceProvider::class,
+        
+        /*Demas proveedores*/
+
         Illuminate\Broadcasting\BroadcastServiceProvider::class,
         Illuminate\Bus\BusServiceProvider::class,
         Illuminate\Cache\CacheServiceProvider::class,
