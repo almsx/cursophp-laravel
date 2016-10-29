@@ -1,45 +1,31 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Laravel</title>
+@extends('plantilla')
+@section('title', 'Conductores')
 
-        <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
+@if(Session::has('message'))
+    <!--div class="alert alert-success alert-dismisible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"></button><span aria-hidden="true">&times;</span>
+        
+    </div-->
+    
+    <div class="alert alert-success alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <strong>Felicidades, tu </strong>{{Session::get('message')}}
+    </div>
 
-        <style>
-            html, body {
-                height: 100%;
-            }
 
-            body {
-                margin: 0;
-                padding: 0;
-                width: 100%;
-                display: table;
-                font-weight: 100;
-                font-family: 'Lato';
-            }
+@endif
 
-            .container {
-                text-align: center;
-                display: table-cell;
-                vertical-align: middle;
-            }
+@section('content')
 
-            .content {
-                text-align: center;
-                display: inline-block;
-            }
+<div class="container">
+            
+    <div class="content">
+        <div class="title">Bienvenidos a Uber</div>
+    </div>
+    
+    <div class="content">
+        {!!link_to('usuarios', $title = 'Pasajeros', $attributes = ['class'=>'btn btn-primary']) !!} </td>
+        {!!link_to('conductores', $title = 'Conductores', $attributes = ['class'=>'btn btn-primary']) !!} </td>
+    </div>
 
-            .title {
-                font-size: 96px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="container">
-            <div class="content">
-                <div class="title">Laravel 5</div>
-            </div>
-        </div>
-    </body>
-</html>
+</div>

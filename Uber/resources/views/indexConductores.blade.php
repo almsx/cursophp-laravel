@@ -37,3 +37,7 @@
 	</tbody>
 	@endforeach
 </table>
+
+{!!$conductores->render()!!}
+
+@stop

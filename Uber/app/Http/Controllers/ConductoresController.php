@@ -35,9 +35,12 @@ class ConductoresController extends Controller
     public function index()
     {
         
-
+        //Mostrar todos los Conductores
         $conductores = Conductores::All();   
+        //Paginar Resultados
+        $conductores = Conductores::paginate(1);
         return view("indexConductores",compact('conductores'));
+        //return view('loginConductores');
     }
     /**
      * Show the form for creating a new resource.
