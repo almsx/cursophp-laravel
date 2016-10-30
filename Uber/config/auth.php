@@ -104,17 +104,7 @@ return [
         ],
     ],
 
-    /*Multi Login*/
+    
 
-    'multi-auth' => [
-    'conductores' => [
-        'driver' => 'eloquent',
-        'model'  => Uber\Conductor::class
-    ]/*,
-    'pasajeros' => [
-        'driver' => 'eloquent',
-        'model'  => Uber\Us::class
-    ]*/
-]
 
 ];

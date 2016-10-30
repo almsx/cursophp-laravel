@@ -9,16 +9,20 @@
 	
 	<div class="alert alert-success alert-dismissible" role="alert">
     	<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-    	<strong>Felicidades, tu </strong>{{Session::get('message')}}
+    	<strong>{{Session::get('message')}}</strong>
     </div>
+
+    <div id="notifications"></div>
 
 
 @endif
 
 @section('content')
-
-<!--Hipervinculos y tabla-->
-<a href="/conductores/create"><button type="button" class="btn btn-default">Agregar Conductor</button></a>
+<ul class="nav navbar-nav">
+                    <li><a href="{{ url('/conductores/create') }}">Agregar Conductor</a></li>
+                </ul>
+                
+                
 <table class="table table-inverse">
 	<thead class="thead-inverse">
 		<th>Nombre</th>

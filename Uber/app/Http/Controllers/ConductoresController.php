@@ -49,6 +49,9 @@ class ConductoresController extends Controller
               
         
         return view("indexConductores",compact('conductores'));
+        //return view('loginConductores');
+        
+
     }
 
     /**

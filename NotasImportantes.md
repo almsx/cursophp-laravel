@@ -138,3 +138,13 @@ Importamos la libreria en nuestro Controlador
 ~~~
 use Illuminate\Support\Facades\Hash;
 ~~~
+
+## Multiple Autenticación de Usuarios (Pasajeros - Conductores)
+
+Importamos las librerias para nuestra aplicación
+
+>
+~~~
+$ composer require sarav/laravel-multiauth
+~~~
+

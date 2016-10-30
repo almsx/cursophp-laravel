@@ -1,5 +1,6 @@
+@extends('plantilla')
 <div class="text-center" style="padding:0px 0">
-	<div>Bienvenido Conductor</div>
+	<div><h1>Bienvenido Conductor Uber</h1></div>
 	<!-- Main Form -->
 	<div class="login-form-1">
 		<form id="login-form" class="text-left">
@@ -7,11 +8,11 @@
 			<div class="main-login-form">
 				<div class="login-group">
 					<div class="form-group">
-						<label for="lg_username" class="sr-only">Username</label>
+						<label for="lg_username" class="sr-only">Usuario</label>
 						<input type="text" id="lg_username" name="lg_username" placeholder="username">
 					</div>
 					<div class="form-group">
-						<label for="lg_password" class="sr-only">Password</label>
+						<label for="lg_password" class="sr-only">Contraseña</label>
 						<input type="password" id="lg_password" name="lg_password" placeholder="password">
 					</div>
 				</div>

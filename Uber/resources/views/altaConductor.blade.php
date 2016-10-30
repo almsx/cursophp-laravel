@@ -15,8 +15,10 @@
 </div>
 @endif
 
-<a href="/conductores/"><button type="button" class="btn btn-default">Panel de Control</button></a> |
-			
+
+<ul class="nav navbar-nav">
+                    <li><a href="{{ url('/conductores') }}">Panel de Control</a></li>
+                </ul>		
 <h1>Uber:: Conductores</h1>
 			
 			{!!Form::open(['route'=>'conductores.store', 'method'=>'post'])!!}
