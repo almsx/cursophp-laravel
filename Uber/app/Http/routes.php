@@ -16,12 +16,10 @@
 Route::get('conductores/pepe','ConductoresController@saludaPepe');
 Route::get('conductores/top10','ConductoresController@top10');
 Route::resource('conductores','ConductoresController');
+Route::resource('log','LogController');
+Route::get('logoutConductor','LogController@LogoutConductor');
 
 
-
-Route::get('/', function () {
-    return view('welcome');
-});
 
 /*Route::get('/users', function(){
 	return view('usuarios');
@@ -36,7 +34,7 @@ Route::get('controlador','PruebaController@index');
 
 Route::get('name/{name}','PruebaController@nombre');
 
-Route::resource('login','LoginController');
+//Route::resource('login','LoginController');
 
 Route::get('/', function () {
     return view('welcome');

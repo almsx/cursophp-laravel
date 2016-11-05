@@ -35,21 +35,40 @@ class ConductoresController extends Controller
 
     public function index()
     {
-        
-        //Mostrar todos los Conductores
-        //$conductores = Conductores::All();   
-        
-        //Paginar Resultados
-        //$conductores = Conductores::paginate(3);
 
-        //Paginar Resultados con Query
-        $conductores = DB::table('Conductores')
-        ->join('Estados', 'Estados.idEstado', '=', 'Conductores.idEstado')
-        ->paginate(4);
+
+        $sessionName = Session::get('nombreConductor');
+        
+        $tam = sizeof($sessionName);
+       
+        if($tam > 0 ){
+            /*return Redirect::to('/conductores');
+            //return "Si hay algo";
+            */
+
+            //Mostrar todos los Conductores
+            //$conductores = Conductores::All();   
+        
+            //Paginar Resultados
+            //$conductores = Conductores::paginate(3);
+
+            //Paginar Resultados con Query
+            $conductores = DB::table('Conductores')
+            ->join('Estados', 'Estados.idEstado', '=', 'Conductores.idEstado')
+            ->paginate(4);
               
         
-        return view("indexConductores",compact('conductores'));
-        //return view('loginConductores');
+            return view("indexConductores",compact('conductores'));
+            //return view('loginConductores');
+        
+        } else {
+            
+             Session::flash('message','Primero debes iniciar sesión');
+             return Redirect::to('/log');
+            
+        }
+        
+        
         
 
     }

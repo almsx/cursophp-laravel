@@ -2,10 +2,6 @@
 @section('title', 'Conductores')
 
 @if(Session::has('message'))
-	<!--div class="alert alert-success alert-dismisible" role="alert">
-		<button type="button" class="close" data-dismiss="alert" aria-label="Close"></button><span aria-hidden="true">&times;</span>
-		
-	</div-->
 	
 	<div class="alert alert-success alert-dismissible" role="alert">
     	<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -14,6 +10,26 @@
 
     <div id="notifications"></div>
 
+
+@endif
+
+@if(Session::has('nombreConductor'))
+	
+	<div class="alert alert-success alert-dismissible" role="alert">
+    	<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    	<strong>Bienvenido {{Session::get('nombreConductor')}}</strong>. <a href="{{ url('/logoutConductor') }}">Cerrar Sesión</a>
+    </div>
+
+    <div id="notifications"></div>
+
+@else
+
+	<div class="alert alert-success alert-dismissible" role="alert">
+    	<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    	<strong>No hay session. </strong><a href="{{ url('/log') }}">Iniciar Sesión</a>
+    </div>
+
+    <div id="notifications"></div>
 
 @endif
 
